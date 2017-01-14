@@ -5,7 +5,11 @@ TODO: Implement pure.css.
 TODO: Implement sick UI.
 */
 
-var display = document.getElementById('display');
+var display = document.getElementById('display-text');
+var genButton = document.getElementById('generate-button');
+var numInput = document.getElementById('num');
+numInput.defaultValue = 0;
+var limit:number = 0;
 
 function sieve(limit: number):number[] {
 
@@ -17,7 +21,7 @@ function sieve(limit: number):number[] {
     var primesOnly:number[] = [];
 
     for(var i:number = 2; i < nums.length; i++) {
-        if nums[i] {
+        if (nums[i]) {
             primesOnly.push(i);
             for(var j:number = i*i; j < limit; j += i) {
                 nums[j] = false;
@@ -27,4 +31,11 @@ function sieve(limit: number):number[] {
 
     return primesOnly;
 
+}
+
+genButton.onclick = function() {
+    limit = numInput.value;
+    var primesRaw:number[] = sieve(limit);
+    var primes:string = primesRaw.join(' ');
+    display.innerHTML = primes;
 }
