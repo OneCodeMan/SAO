@@ -1,3 +1,12 @@
+/*
+TODO: Declaring a function variable in TS.
+TODO: Display the numbers on the page.
+TODO: Implement pure.css.
+TODO: Implement sick UI.
+*/
+
+var display = document.getElementById('display');
+
 function sieve(limit: number):number[] {
 
     if (limit <= 1) {
@@ -19,5 +28,3 @@ function sieve(limit: number):number[] {
     return primesOnly;
 
 }
-
-console.log(sieve(2));
