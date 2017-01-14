@@ -11,7 +11,15 @@ var numInput = document.getElementById('num');
 numInput.defaultValue = 0;
 var limit:number = 0;
 
-function sieve(limit: number):number[] {
+function range(start:number, end:number):number[] {
+    var nums = [];
+    for(var i = start; i < end; i++) {
+        nums.push(i);
+    }
+    return nums;
+}
+
+function sieve(limit:number):number[] {
 
     if (limit <= 1) {
         return [];
