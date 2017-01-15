@@ -1,8 +1,3 @@
-/*
-TODO: Disable button when value is above max
-TODO: Mobile first UI
-*/
-
 var display = document.getElementById('display-text');
 var genButton = document.getElementById('generate-button');
 var numInput = document.getElementById('num');
