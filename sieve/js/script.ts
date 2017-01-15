@@ -1,23 +1,14 @@
 /*
-TODO: Declaring a function variable in TS.
-TODO: Display the numbers on the page.
-TODO: Implement pure.css.
-TODO: Implement sick UI.
+TODO: Disable button when value is above max
+TODO: Mobile first UI
 */
 
 var display = document.getElementById('display-text');
 var genButton = document.getElementById('generate-button');
 var numInput = document.getElementById('num');
 numInput.defaultValue = 0;
+var factDisplay = document.getElementById('fact-display');
 var limit:number = 0;
-
-function range(start:number, end:number):number[] {
-    var nums = [];
-    for(var i = start; i < end; i++) {
-        nums.push(i);
-    }
-    return nums;
-}
 
 function sieve(limit:number):number[] {
 
@@ -46,4 +37,5 @@ genButton.onclick = function() {
     var primesRaw:number[] = sieve(limit);
     var primes:string = primesRaw.join(' ');
     display.innerHTML = primes;
+    factDisplay.innerHTML = 'There are ' + primesRaw.length + ' prime numbers under ' + limit;
 }
