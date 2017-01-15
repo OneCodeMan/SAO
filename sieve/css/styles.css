@@ -1,0 +1,24 @@
+#container {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+#container #display {
+  border: solid 1px;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  min-height: 400px;
+}
+#container #display:hover {
+  animation: spin 5s ease;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}
